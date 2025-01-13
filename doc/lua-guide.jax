@@ -143,7 +143,7 @@ Note: サブモジュールは単なるサブディレクトリであること�
     if not ok then
       print("Module had an error")
     else
-      mymod.function()
+      mymod.func()
     end
 <
 |:source| とは対照的に、|require()| は |runtimepath| 内の `lua/` ディレクトリを
