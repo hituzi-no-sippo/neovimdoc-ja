@@ -85,9 +85,9 @@ Lua コードを含めることができます。:
 
 Nvim は、`init.vim` か `init.lua` を設定ファイルとして使用することができます。
 ただし、同時に使用することはできません。これらは、|config| ディレクトリへ配置す
-る必要があり一般的に Linux, BSD, macOS では `~/.config/nvim` で Windows では
-`~/AppData/Local/nvim/` です。Note `init.vim` 内で Lua を、`init.vim` 内でVim
-sript を使うこともできます。後ほど説明します。
+る必要があります。(`:echo stdpath('config')` を実行するとそれの場所を見れます)
+Note `init.vim` 内で Lua を、`init.vim` 内でVim sript を使うこともできます。
+後ほど説明します。
 
 その他の Lua スクリプトを |startup| 時に自動で実行させたい場合、`runtimepath` 内
 にある `plugin/` ディレクトリに配置してください。
