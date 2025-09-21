@@ -27,14 +27,14 @@ APIについて                                                      *lua-guide-
 です。この API は3つの異るレイヤーから成っています:
 
 1. Vim から継承された "Vim API": Vim script の |ex-commands| 、
-|builtin-functions|、 |uset-function|。これらの3つはそれぞれ、 |vim.cmd()|、
-|vim.fn| でアクセスできます。下記の |lua-guide-vimscript| で紹介します。
+   |vimscript-functions|、 |uset-function|。これらの3つはそれぞれ、 |vim.cmd()|、
+   |vim.fn| でアクセスできます。下記の |lua-guide-vimscript| で紹介します。
 
-2. リモートプラグインと GUI で使われる C で書かれた "Nvim API"。 |api| を参照し
-てください。これらの関数は |vim.api| でアクセスできます。
+2. リモートプラグインと GUI で使われる C で書かれた "Nvim API"。
+   |api| を参照してください。これらの関数は |vim.api| でアクセスできます。
 
 3. Lua 専用に書かれた "Lua API"。これらは `vim.*` でアクセスできます。
-|lua-stdlib| を参照してください。
+   |lua-stdlib| を参照してください。
 
 ここで重要な違いは、API 関数は元のレイヤーから動作を継承することです。例えば、
 Nvim API 関数は Lua で引数を省略(`nil` として渡される)できたとしても全てを指定
@@ -212,7 +212,7 @@ Vim script 関数                                        *lua-guide-vim-function
 
     vim.fn.jobstart('ls', { on_stdout = print_stdout })
 <
-これは |builtin-function| と |user-function| の両方で動作します。
+これは |vimscript-functions| と |user-function| の両方で動作します。
 
 Note ハッシュ(`#`)は Lua で有効な識別子ではないため、 |autoload| 関数などを呼び
 出すには次の構文を使用します。:
@@ -221,8 +221,8 @@ Note ハッシュ(`#`)は Lua で有効な識別子ではないため、 |autolo
 <
 ------------------------------------------------------------------------------
 参照:
-• |builtin-functions|: Vim script 関数のアルファベット順のリスト
-• |function-list|:     トピックごとにグループ化された Vim script 関数のリスト
+• |vimscript-functions|: 全てのVim script 関数の説明
+• |function-list|:     トピックごとにグループ化された Vim script 関数
 • |:runtime|:          |'runtimepath'| のパターンに一致する全ての Lua スクリプトが
                       実行されます
 
