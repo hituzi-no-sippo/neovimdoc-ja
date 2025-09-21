@@ -95,7 +95,7 @@ Note `init.vim` 内で Lua を、`init.vim` 内でVim sript を使うことも�
 ------------------------------------------------------------------------------
 Luaモジュール                                                *lua-guide-modules*
 
-任意のタイミングで Lua ファイルを読み込みたい場合、 |'runtimepath'| 内にある
+任意のタイミングで Lua ファイルを読み込みたい場合、 'runtimepath' 内にある
 `lua` ディレクトリに配置して `require` でロードします。(これは、Vim script にお
 ける |autoload| と同じ役割です。)
 
@@ -144,7 +144,7 @@ Note: サブモジュールは単なるサブディレクトリであること�
       mymod.func()
     end
 <
-|:source| とは対照的に、|require()| は |runtimepath| 内の `lua/` ディレクトリを
+|:source| とは対照的に、|require()| は 'runtimepath' 内の `lua/` ディレクトリを
 検索するだけでなく、初回使用時にモジュールをキャッシュします。再度 `require()`
 を呼び出す場合、スクリプトは評価されずキャッシュされたファイルを返します。もう一
 度実行したい場合、手動でキャッシュを削除します。:
@@ -223,7 +223,7 @@ Note ハッシュ(`#`)は Lua で有効な識別子ではないため、 |autolo
 参照:
 • |vimscript-functions|: 全てのVim script 関数の説明
 • |function-list|:     トピックごとにグループ化された Vim script 関数
-• |:runtime|:          |'runtimepath'| のパターンに一致する全ての Lua スクリプトが
+• |:runtime|:          'runtimepath' のパターンに一致する全ての Lua スクリプトが
                       実行されます
 
 ==============================================================================
